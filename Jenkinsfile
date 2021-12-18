@@ -1,7 +1,12 @@
 //Declarative
 pipeline {
-	// agent any
-	agent {docker { image 'python:alpine3.10'} }
+	agent any
+	// agent {docker { image 'python:alpine3.10'} }
+	environment {
+		dockerHome = tool 'myDocker'
+		mavenHome = tool 'myMaven'
+		PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
+	}
 	stages {
 		stage ('Build') {
 			steps {
