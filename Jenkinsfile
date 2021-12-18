@@ -18,9 +18,6 @@ pipeline {
 			}
 		}
 	}
-	echo "Build"
-	echo "Test"
-	echo "Integration Test"
 }
 
 // //Scripted
