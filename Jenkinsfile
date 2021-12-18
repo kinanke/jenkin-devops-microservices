@@ -10,7 +10,8 @@ pipeline {
 	stages {
 		stage ('Build') {
 			steps {
-				sh 'python3 --version'
+				sh 'mvn --version'
+				sh 'docker version'
 				echo "Build"
 			}
 		}
